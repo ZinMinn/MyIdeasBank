@@ -26,13 +26,14 @@ jobs:
           name: "Install yarn"
           command: |
             sudo apt-get update
-            sudo apt-get install -y --no-install-recommends yarn
+            sudo apt-get install -y --no-install-recommends npm
       - run:
           name: chmod permissions to gradlew
           command: chmod +x ./gradlew
       - run:
           name: "Generate documents"
-          command: ./gradlew asciidoctor
+          command: |
+            ./gradlew asciidoctor
       - run:
           name: "Publish documents"
           command: | 

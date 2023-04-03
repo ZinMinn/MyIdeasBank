@@ -1,7 +1,10 @@
-#!/usr/bin/env bash
+#! /usr/bin/env sh
 
 # Exit if any command fails
 set -e
+
+export TERM=linux
+export TERMINFO=/etc/terminfo
 
 git config --global user.email "info.zinminn29@gmail.com"
 git config --global user.name 'Zin Minn'
@@ -12,10 +15,15 @@ BUILD_DIR="build/html5"
 # The directory name will be the same as specific branch name
 TARGET_DIR="$(git rev-parse --abbrev-ref HEAD) -v$(cat .version)"
 
+# give permission to create node-modules
+# sudo mkdir /usr/local/lib/node_modules/
+# sudo mkdir /usr/local/lib/node_modules/@koumoul
+# sudo chown -R $(whoami) /usr/local/lib/node_modules/
+
 # Install dependencies
-yarn global add @koumoul/gh-pages-multi     # Install gh-pages-multi
+sudo npm install -g @koumoul/gh-pages-multi     # Install gh-pages-multi
 
 # Deploy "docs" directory
-yarn exec gh-pages-multi -- deploy -s ${BUILD_DIR} -t "$TARGET_DIR"
+gh-pages-multi deploy -s ${BUILD_DIR} -t "$TARGET_DIR"
 
 # EOF
