@@ -17,6 +17,17 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
+      - run:
+          name: "Install graphviz"
+          command: |
+            sudo apt-get update
+            sudo apt-get install -y --no-install-recommends graphviz
+      - run:
+          name: "Generate documents"
+          command: ./gradlew asciidoctor
+      - run:
+          name: "Publish documents"
+          command: publish-docs.sh
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
