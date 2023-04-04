@@ -5,7 +5,7 @@ version: 2.1
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/configuration-reference/#jobs
 jobs:
-  say-hello:
+  generate-gh-page:
     # Specify the execution environment. You can specify an image from Docker Hub or use one of our convenience images from CircleCI's Developer Hub.
     # See: https://circleci.com/docs/configuration-reference/#executor-job
     docker:
@@ -23,7 +23,7 @@ jobs:
             sudo apt-get update
             sudo apt-get install -y --no-install-recommends graphviz
       - run:
-          name: "Install yarn"
+          name: "Install npm"
           command: |
             sudo apt-get update
             sudo apt-get install -y --no-install-recommends npm
@@ -44,9 +44,8 @@ jobs:
 workflows:
   say-hello-workflow:
     jobs:
-      - say-hello:
+      - generate-gh-page:
           filters:
             branches:
               only:
                 - main
-                - develop

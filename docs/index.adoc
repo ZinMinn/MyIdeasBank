@@ -1,3 +1,2 @@
 = Here is my all Ideas for lifetime
-:revnumber: {project-version}
 :doctype: book
