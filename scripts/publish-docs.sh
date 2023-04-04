@@ -6,8 +6,8 @@ set -e
 export TERM=linux
 export TERMINFO=/etc/terminfo
 
-git config --global user.email "info.zinminn29@gmail.com"
-git config --global user.name 'Zin Minn'
+git config --global user.email '<>'
+git config --global user.name 'CircleCI'
 
 BUILD_DIR="build/html5"
 
