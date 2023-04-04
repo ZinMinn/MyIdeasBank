@@ -34,6 +34,9 @@ jobs:
           name: "Generate documents"
           command: |
             ./gradlew asciidoctor
+      - add_ssh_keys:
+          fingerprints:
+            - "37:f8:cd:e8:b0:ba:ed:e0:e4:13:13:ec:d0:0f:b9:bd"
       - run:
           name: "Publish documents"
           command: | 
