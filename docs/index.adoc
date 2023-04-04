@@ -1,2 +1,11 @@
 = Here is my all Ideas for lifetime
 :doctype: book
+
+
+. Verify the checkin location
+. Toilet availability live map
+. Create short story telling board
+. Find a soulmate on secret-mission (randomly match)
+. Optimal discount finder
+. Single motivation quote for everyday
+. Inflaction calculator per currency(especially MMK)

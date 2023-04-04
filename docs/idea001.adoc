@@ -1,0 +1,3 @@
+= Verify the checkin location
+
+How to verify someone is actually visited to specific location/place?
