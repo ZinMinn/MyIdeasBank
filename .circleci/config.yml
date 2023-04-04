@@ -45,3 +45,8 @@ workflows:
   say-hello-workflow:
     jobs:
       - say-hello
+          filters:
+            branches:
+              only:
+                - master
+                - develop
