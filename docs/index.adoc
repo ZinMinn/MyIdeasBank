@@ -1,2 +1,0 @@
-= Here is my all Ideas for lifetime
-:doctype: book
